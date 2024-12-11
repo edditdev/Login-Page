@@ -1,0 +1,85 @@
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e2f;
+            color: #dcdcdc;
+            font-family: Consolas, "Courier New", monospace;
+        }
+
+        /* Lewa część: Tekst główny */
+        .main-content {
+            flex: 1;
+            max-width: 55%;
+            padding: 40px;
+        }
+
+        .main-content h1 {
+            font-size: 48px;
+            color: royalblue;
+            margin-bottom: 20px;
+        }
+
+        .main-content h2 {
+            font-size: 16px;
+            color: #aaa;
+            font-weight: normal;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Panel logowania */
+        .login-panel {
+            flex: 1;
+            max-width: 25%;
+            margin: auto;
+            padding: 20px;
+            background-color: #2b2b3d;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-panel h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: royalblue;
+        }
+
+        .login-panel input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 15px;
+            background-color: #1e1e2f;
+            border: 1px solid royalblue;
+            border-radius: 4px;
+            color: #dcdcdc;
+            font-size: 14px;
+        }
+
+        .login-panel button {
+            width: 90%;
+            padding: 8px;
+            background-color: royalblue;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-panel button:hover {
+            background-color: royalblue;
+        }
+    </style>
