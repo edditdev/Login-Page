@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEETY</title>
+</head>
+<body>
+   
+    <div class="main-content">
+        <h1>BRAND NAME</h1>
+        <h2>
+            Addional text abt ur brand
+        </h2>
+        <p><strong>by:</strong> eddit</p>
+    </div>
+
+  
+    <div class="login-panel">
+        <h2>Admin Panel</h2>
+        <form id="login-form">
+            <input type="password" id="password" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: royalblue; display: none;">Incorrect password. Try again.</p>
+    </div>
+
+    <script>
+async function loadEncryptedPassword() {
+    const response = await fetch('pass.enc');
+    const encryptedPassword = await response.text();
+    return atob(encryptedPassword.trim()); 
+}
+
+document.getElementById("login-form").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const inputPassword = document.getElementById("password").value;
+    const correctPassword = await loadEncryptedPassword();
+
+    if (inputPassword === correctPassword) {
+        window.location.href = "kenziinfo.html"; 
+    } else {
+        document.getElementById("error-message").style.display = "block";
+    }
+});
+    </script>
+</body>
+</html>
